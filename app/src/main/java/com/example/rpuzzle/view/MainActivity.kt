@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         val stats = findViewById<TextView>(R.id.stats)
         val playerMoves = viewmodel.puzzle.playerMoves
         val bestMoves = viewmodel.puzzle.bestMoves
-        stats.text =  "Best Solution: $bestMoves\nYour Moves: $playerMoves"
+        stats.text =  "Best Solution: $bestMoves   Your Moves: $playerMoves"
     }
 
     private fun updatePuzzle(){
