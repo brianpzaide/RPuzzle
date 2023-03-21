@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:configChanges="keyboardHidden|orientation|screenSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:freezesText="true"
+        android:text="Best Solution: X\nYour Moves: X"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toStartOf="@+id/rcontrols_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.example.rpuzzle.view.custom.RBoardView
+        android:id="@+id/target_rboard_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/current_rboard_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stats"
+        app:layout_constraintBottom_toTopOf="@+id/board_rg"/>
+
+    <com.example.rpuzzle.view.custom.RBoardView
+        android:id="@+id/current_rboard_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintTop_toBottomOf="@id/stats"
+        app:layout_constraintEnd_toStartOf="@+id/rcontrols_view"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/target_rboard_view"
+        app:layout_constraintBottom_toTopOf="@+id/board_rg"/>
+
+    <include
+        android:id="@+id/rcontrols_view"
+        layout="@layout/control_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/current_rboard_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/board_rg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/stats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioButton
+            android:id="@+id/torus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="torus"
+            android:textStyle="italic"
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/kb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="klein-bottle"
+            android:textStyle="italic"
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="real projective plane"
+            android:textStyle="italic"
+            android:textColor="@color/text"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/rp_prgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/current_rboard_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

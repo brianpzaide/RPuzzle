@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/rp_undo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="undo"
+        android:textStyle="italic"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toStartOf="@+id/rp_reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/rp_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="reset"
+        android:textStyle="italic"
+        android:textColor="@color/text"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rp_undo"
+        app:layout_constraintTop_toTopOf="@+id/rp_undo" />
+
+    <TextView
+        android:id="@+id/rp_ccw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_action_ccw"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rp_up"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rp_undo" />
+
+    <TextView
+        android:id="@+id/rp_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_action_up"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rp_cw"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rp_ccw"
+        app:layout_constraintTop_toTopOf="@+id/rp_ccw" />
+
+    <TextView
+        android:id="@+id/rp_cw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_action_cw"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rp_up"
+        app:layout_constraintTop_toTopOf="@+id/rp_ccw" />
+
+    <TextView
+        android:id="@+id/rp_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/ic_action_left"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:layout_marginTop="156dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rp_down"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rp_ccw" />
+
+    <TextView
+        android:id="@+id/rp_down"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/ic_action_down"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rp_right"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rp_left"
+        app:layout_constraintTop_toTopOf="@+id/rp_left" />
+
+
+    <TextView
+        android:id="@+id/rp_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableBottom="@drawable/ic_action_right"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rp_down"
+        app:layout_constraintTop_toTopOf="@+id/rp_left" />
+
+    <TextView
+        android:id="@+id/view_solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="solution"
+        android:gravity="center"
+        android:textColor="@color/text"
+        android:freezesText="true"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rp_left" />
+
+
+    <Button
+        android:id="@+id/next_puzzle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="next"
+        android:textStyle="italic"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_solution" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
