@@ -23,9 +23,6 @@ import com.example.rpuzzle.viewmodel.PlayRPuzzleViewModel
 import com.example.rpuzzle.viewmodel.PlayRPuzzleViewModel.MessageType
 
 
-
-
-
 class MainActivity : AppCompatActivity() {
     private lateinit var viewmodel : PlayRPuzzleViewModel
     private lateinit var targetBoardView: RBoardView
@@ -99,7 +96,6 @@ class MainActivity : AppCompatActivity() {
             else -> puzzleType.check(R.id.torus)
         }
 
-
         viewmodel.puzzle.solvedLiveData.observe(this, {
             button9.isEnabled = it
         })
@@ -117,10 +113,6 @@ class MainActivity : AppCompatActivity() {
             viewmodel.send(Pair(MessageType.UPDATE_PUZZLE_TYPE, ptype))
 
         }
-
-
-
-
     }
 
     private fun updateCurrentBoard(currentBoardArr: IntArray){
@@ -165,5 +157,4 @@ class MainActivity : AppCompatActivity() {
     private fun updateSolutionTextView(it: String?) {
         solutionTextView.text = it
     }
-
 }
