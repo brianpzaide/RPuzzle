@@ -1,5 +1,5 @@
 # RPuzzle
-Android puzzle app inspired by Rubik 2d game, extended to include other topological surfaces Torus, Klien-bottle, Real Projective Plane.
+Android puzzle app inspired by Rubik Electronic game, extended to include other topological surfaces Torus, Klien-bottle, Real Projective Plane.
 
 ![app image](docs/main.png)
 
